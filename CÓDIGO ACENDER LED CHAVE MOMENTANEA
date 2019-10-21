@@ -1,0 +1,19 @@
+//Declaração de variáveis
+int led = 2;
+int botao = 7;
+
+void setup() {
+//Configura o código
+  pinMode(led, OUTPUT);
+  pinMode(botao, INPUT);
+}
+
+void loop() {
+//Roda infinitas vezes
+if(digitalRead(botao) == HIGH){
+  digitalWrite(led, HIGH);
+}
+else{
+  digitalWrite(led, LOW);
+}
+}
