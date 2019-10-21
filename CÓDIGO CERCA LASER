@@ -1,0 +1,21 @@
+int buzzer = 13;
+int ldr = A0;
+int valorldr = 1023;
+
+void setup(){
+  Serial.begin(9600);
+  pinMode(buzzer, OUTPUT);
+}
+
+void loop(){
+  valorldr = anologRead(ldr);
+  Serial.println(valorldr);
+
+    if (valorldr <= 900){
+      digitalWrite(buzzer,HIGH);
+    }
+    else{
+      digitalWrite(buzzer, LOW);
+      delay(100);
+    }
+}
