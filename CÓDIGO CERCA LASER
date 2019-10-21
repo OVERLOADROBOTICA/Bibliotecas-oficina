@@ -8,7 +8,7 @@ void setup(){
 }
 
 void loop(){
-  valorldr = anologRead(ldr);
+  valorldr = analogRead(ldr);
   Serial.println(valorldr);
 
     if (valorldr <= 900){
